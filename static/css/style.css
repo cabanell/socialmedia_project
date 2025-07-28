@@ -1,6 +1,338 @@
+/* === Paleta de Colores Minimalista (puedes ajustar estos colores según tu marca) === */
 body {
-    font-family: sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 20px;
+  --color-bg: #FFFFFF;         /* Fondo principal: blanco */
+  --color-text: #333333;       /* Texto principal: gris oscuro casi negro para buena legibilidad */
+  --color-accent: #0066CC;     /* Color de acento: azul corporativo (ejemplo) */
+  --color-secondary-bg: #F4F4F4; /* Fondo secundario: gris muy claro para secciones */
+}
+/* Nota: Si prefieres no usar variables CSS, puedes poner los colores directamente en cada propiedad. */
+
+/* === Estilos globales === */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  margin: 0;
+}
+/* Un contenedor centrado para limitar el ancho del contenido y dar márgenes laterales */
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+/* === Barra de navegación === */
+.navbar {
+  background-color: var(--color-bg);
+  padding: 10px 20px;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.navbar-logo .logo-text {
+  font-size: 1.5em;
+  font-weight: bold;
+  color: var(--color-text);
+  text-decoration: none;
+}
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.navbar-menu a {
+  text-decoration: none;
+  color: var(--color-text);
+  padding: 8px;
+  transition: color 0.3s;
+}
+.navbar-menu a:hover {
+  color: var(--color-accent); /* Cambia el color del enlace al pasar el cursor para resaltar */
+}
+
+/* === Sección Hero === */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-color: var(--color-secondary-bg); /* un fondo gris claro para destacar la sección */
+}
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+.hero p {
+  font-size: 1.2em;
+  margin-bottom: 30px;
+}
+.btn-cta {
+  display: inline-block;
+  background-color: var(--color-accent);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+.btn-cta:hover {
+  background-color: #005bb5; /* un tono más oscuro del color acento al hacer hover */
+}
+
+/* === Sección Servicios === */
+.services {
+  padding: 60px 20px;
+  text-align: center;
+}
+.services h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+}
+.services-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.service {
+  background-color: var(--color-secondary-bg);
+  padding: 20px;
+  border-radius: 8px;
+  width: 30%;              /* Tres columnas; ajusta a 45% si quieres solo dos columnas en una fila */
+  min-width: 250px;        /* en pantallas muy pequeñas, cada tarjeta ocupa al menos este ancho */
+  text-align: left;
+}
+.service h3 {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+  color: var(--color-accent);
+}
+.service p {
+  font-size: 0.95em;
+  line-height: 1.4;
+}
+
+/* === Sección Portafolio === */
+.portfolio {
+  padding: 60px 20px;
+}
+.portfolio h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.portfolio-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.portfolio-item {
+  width: 300px;
+  text-align: center;
+}
+.portfolio-item img {
+  max-width: 100%;
+  border-radius: 5px;
+  transition: transform 0.3s;
+}
+.portfolio-item img:hover {
+  transform: scale(1.05);
+}
+.caption {
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+.portfolio-results {
+  max-width: 600px;
+  margin: 0 auto;
+}
+.portfolio-results h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.portfolio-results ul {
+  list-style: disc inside;  /* viñetas dentro de la caja para alinearlas con el texto */
+}
+.portfolio-results li {
+  margin-bottom: 5px;
+}
+
+/* === Sección Preguntas Frecuentes (FAQ) === */
+.faq {
+  padding: 60px 20px;
+}
+.faq h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.faq-item {
+  margin-bottom: 20px;
+}
+.faq-item h3 {
+  font-size: 1.1em;
+  color: var(--color-accent);
+  margin-bottom: 5px;
+}
+.faq-item p {
+  line-height: 1.5;
+}
+
+/* === Sección Precios === */
+.prices {
+  padding: 60px 20px;
+  text-align: center;
+}
+.prices h2 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+.prices p {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  color: #555;
+}
+.price-plans {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.plan {
+  background-color: var(--color-secondary-bg);
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  width: 280px;
+  text-align: left;
+}
+.plan h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: var(--color-text);
+}
+.plan-price {
+  font-size: 2em;
+  color: var(--color-accent);
+  margin-bottom: 15px;
+}
+.plan-price span {
+  font-size: 0.5em;
+  color: var(--color-text);
+}
+.plan-features {
+  list-style: none;
+  padding: 0;
+}
+.plan-features li {
+  margin-bottom: 8px;
+}
+.note {
+  font-size: 0.9em;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* === Sección Contacto === */
+.contact {
+  padding: 60px 20px;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+.contact p {
+  max-width: 500px;
+  margin: 0 auto 40px auto;
+  color: #555;
+}
+.contact-info {
+  margin-bottom: 40px;
+  text-align: left;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.contact-info p {
+  margin-bottom: 5px;
+}
+.contact-info strong {
+  color: var(--color-text);
+}
+.contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: left;
+}
+.form-field {
+  margin-bottom: 15px;
+}
+.form-field label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font: inherit;
+}
+.form-field input:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--color-accent);
+  box-shadow: 0 0 5px rgba(0, 102, 204, 0.3);
+}
+
+/* === Footer === */
+.footer {
+  background-color: var(--color-secondary-bg);
+  text-align: center;
+  padding: 15px 20px;
+  font-size: 0.9em;
+  color: #666;
+}
+.footer p {
+  margin: 5px 0;
+}
+
+/* === Responsividad (media queries para dispositivos móviles) === */
+@media (max-width: 768px) {
+  .navbar-menu {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .navbar-menu li {
+    margin: 5px 0;
+  }
+  .services-list {
+    flex-direction: column;
+    align-items: center;
+  }
+  .service {
+    width: 80%; /* En móviles, las tarjetas de servicios ocupan más ancho (una columna) */
+  }
+  .price-plans {
+    flex-direction: column;
+    align-items: center;
+  }
+  .plan {
+    width: 80%; /* En móvil, cada plan ocupa la mayor parte del ancho para legibilidad */
+  }
 }

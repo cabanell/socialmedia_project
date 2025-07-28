@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+{% block title %}Precios{% endblock %}
+
+{% block content %}
+  <section class="prices">
+    <h2>Planes y Precios</h2>
+    <p>Elige el plan que mejor se adapte a las necesidades de tu negocio. Sin contratos forzosos y con total transparencia.</p>
+
+    <div class="price-plans">
+      <!-- Plan 1 -->
+      <div class="plan">
+        <h3>Básico</h3>
+        <p class="plan-price">$100 <span>/ mes</span></p>
+        <ul class="plan-features">
+          <li>Gestión de 1 red social</li>
+          <li>3 publicaciones por semana</li>
+          <li>Reporte mensual básico</li>
+        </ul>
+      </div>
+
+      <!-- Plan 2 -->
+      <div class="plan">
+        <h3>Profesional</h3>
+        <p class="plan-price">$250 <span>/ mes</span></p>
+        <ul class="plan-features">
+          <li>Gestión de 3 redes sociales</li>
+          <li>7 publicaciones por semana</li>
+          <li>Reporte mensual detallado</li>
+          <li>Análisis de métricas avanzado</li>
+        </ul>
+      </div>
+
+      <!-- Plan 3 -->
+      <div class="plan">
+        <h3>Empresarial</h3>
+        <p class="plan-price">$500 <span>/ mes</span></p>
+        <ul class="plan-features">
+          <li>Gestión de 5+ redes sociales</li>
+          <li>Publicaciones ilimitadas*</li>
+          <li>Reporte semanal personalizado</li>
+          <li>Asesoría estratégica dedicada</li>
+        </ul>
+      </div>
+    </div>
+    <p class="note">*Ilimitadas dentro de un volumen razonable acorde a la estrategia acordada.</p>
+  </section>
+{% endblock %}

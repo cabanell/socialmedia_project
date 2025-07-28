@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %}Portafolio{% endblock %}
+
+{% block content %}
+  <section class="portfolio">
+    <h2>Portafolio</h2>
+    <p>Estos son algunos ejemplos de nuestro trabajo en redes sociales y los resultados obtenidos:</p>
+
+    <!-- Galería de imágenes de ejemplo -->
+    <div class="portfolio-gallery">
+      <div class="portfolio-item">
+        <img src="static/img/portfolio1.jpg" alt="Ejemplo de Post 1" />
+        <p class="caption">Campaña de Instagram - <strong>+5K seguidores</strong> en 3 meses</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="static/img/portfolio2.jpg" alt="Ejemplo de Post 2" />
+        <p class="caption">Estrategia de Facebook - <strong>Alcance 2x</strong> en 1 mes</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="static/img/portfolio3.jpg" alt="Ejemplo de Post 3" />
+        <p class="caption">Contenido Viral en Twitter - <strong>+300% engagement</strong></p>
+      </div>
+      <!-- Agrega más .portfolio-item según sea necesario -->
+    </div>
+
+    <!-- Lista de resultados destacados -->
+    <div class="portfolio-results">
+      <h3>Resultados Destacados:</h3>
+      <ul>
+        <li>Aumento promedio de seguidores: <strong>+120%</strong> en los primeros 6 meses.</li>
+        <li>Incremento del engagement (me gusta, comentarios, compartidos): <strong>+75%</strong>.</li>
+        <li>Mejora en el alcance de publicaciones: <strong>2x</strong> más personas alcanzadas.</li>
+      </ul>
+    </div>
+  </section>
+{% endblock %}

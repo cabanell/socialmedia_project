@@ -1,12 +1,39 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Social Media Studio{% endblock %}</title>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Social Media Studio{% endblock %}</title>
+  <!-- Hoja de estilos global -->
+  <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+  <!-- Si es un sitio estático, usar: <link rel="stylesheet" href="static/css/style.css"> -->
 </head>
 <body>
-    {% block content %}{% endblock %}
+  <!-- Barra de navegación -->
+  <nav class="navbar">
+    <div class="navbar-logo">
+      <!-- Logo o nombre de la agencia -->
+      <a href="index.html" class="logo-text">SocialMediaStudio</a> <!-- Cambia 'SocialMediaStudio' por el nombre de tu agencia -->
+    </div>
+    <ul class="navbar-menu">
+        <li><a href="{% url 'home' %}">Inicio</a></li>
+        <li><a href="{% url 'portfolio' %}">Portafolio</a></li>
+        <li><a href="{% url 'faq' %}">FAQ</a></li>
+        <li><a href="{% url 'prices' %}">Precios</a></li>
+        <li><a href="{% url 'contact' %}">Contáctanos</a></li>
+    </ul>
+  </nav>
+
+  <!-- Contenido específico de cada página -->
+  <main>
+    {% block content %}{% endblock %}  <!-- Bloque de contenido dinámico para cada página -->
+  </main>
+
+  <!-- Pie de página global -->
+  <footer class="footer">
+    <p>&copy; 2025 Mi Agencia de Social Media. Todos los derechos reservados.</p> <!-- Cambia el texto del footer según tu necesidad -->
+  </footer>
 </body>
 </html>

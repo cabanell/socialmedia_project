@@ -1,0 +1,32 @@
+{% extends "base.html" %}  <!-- Extiende de la plantilla base (Django) -->
+{% block title %}Inicio{% endblock %}  <!-- Título de la página -->
+
+{% block content %}
+  <!-- Sección Hero de bienvenida -->
+  <section class="hero">
+    <h1>Impulsa tu presencia en redes sociales</h1>
+    <p>Agencia profesional de Social Media Management. Creamos, gestionamos y hacemos crecer tus redes.</p>
+    <a href="contact.html" class="btn-cta">Contáctanos</a>  <!-- Llamado a la acción -->
+  </section>
+
+  <!-- Sección de Servicios -->
+  <section class="services">
+    <h2>Nuestros Servicios</h2>
+    <div class="services-list">
+      <div class="service">
+        <h3>Gestión de Redes Sociales</h3>
+        <p>Manejo integral de tus cuentas de Instagram, Facebook, Twitter y más.</p>
+      </div>
+      <div class="service">
+        <h3>Creación de Contenido</h3>
+        <p>Diseño gráfico y copies atractivos adaptados a tu marca y audiencia.</p>
+      </div>
+      <div class="service">
+        <h3>Análisis de Métricas</h3>
+        <p>Reportes detallados del crecimiento, engagement y alcance de tus publicaciones.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- (Opcional) Puedes agregar más secciones en el Home, por ejemplo, una sección "Sobre Nosotros" o testimonios de clientes -->
+{% endblock %}
